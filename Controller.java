@@ -58,7 +58,6 @@ public class Controller {
             }
         });
 
-        // Menambahkan listener ke tombol modulus
         view.addtombolOperator(view.tombolMod, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -66,7 +65,6 @@ public class Controller {
             }
         });
 
-        // Menambahkan listener ke tombol sama dengan
         view.addtombolSamaDengan(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -76,7 +74,6 @@ public class Controller {
             }
         });
 
-        // Menambahkan listener ke tombol reset
         view.addtombolResetListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -86,7 +83,6 @@ public class Controller {
             }
         });
 
-        // Menambahkan listener ke tombol hapus (delete)
         view.addtombolHapusListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -95,7 +91,6 @@ public class Controller {
             }
         });
 
-        // Menambahkan listener ke tombol koma
         view.addtombolOperator(view.tombolKoma, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -105,7 +100,6 @@ public class Controller {
         });
     }
 
-    // Method untuk mengatur tindakan saat tombol operator diklik
     private void tombolOperatorDiClick(JButton button, String operator) {
         model.setOperator(operator); // Mengatur operator di model
         tombolResetDiClick(); // Mereset tampilan tombol operator sebelumnya
@@ -113,7 +107,6 @@ public class Controller {
         tombolOperatorTerakhir = button; // Menyimpan referensi tombol operator yang terakhir diklik
     }
 
-    // Method untuk mereset tampilan tombol operator
     private void tombolResetDiClick() {
         if (tombolOperatorTerakhir != null) {
             // Mengembalikan warna tombol operator ke warna default
